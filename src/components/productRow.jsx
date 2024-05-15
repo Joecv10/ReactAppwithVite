@@ -1,10 +1,17 @@
 import React from "react";
 
-const ProductRows = () => {
+//Have to add data from the json later
+const ProductRows = ({ product }) => {
+  const name = product.stocked ? (
+    product.name
+  ) : (
+    <span style={{ color: "red" }}>{product.name}</span>
+  );
   return (
-    <>
-      <h2>This is the product Row component</h2>
-    </>
+    <tr>
+      <td>{name}</td>
+      <td>{product.price}</td>
+    </tr>
   );
 };
 
