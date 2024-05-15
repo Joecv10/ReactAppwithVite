@@ -1,5 +1,5 @@
 import { useState } from "react";
-import productRows from "../components/productRow";
+import ProductRows from "../components/ProductRow";
 
 function FilterableProductTable() {
   const [count, setCount] = useState(0);
@@ -7,7 +7,7 @@ function FilterableProductTable() {
   return (
     <>
       <h1>This is the container</h1>
-      <productRows />
+      <ProductRows />
     </>
   );
 }

@@ -1,6 +1,6 @@
 import React from "react";
 
-const productRows = () => {
+const ProductRows = () => {
   return (
     <>
       <h2>This is the product Row component</h2>
@@ -8,4 +8,4 @@ const productRows = () => {
   );
 };
 
-export default productRows;
+export default ProductRows;
