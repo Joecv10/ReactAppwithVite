@@ -26,15 +26,21 @@ const ProdcutTable = ({ products, filterText, inStockOnly }) => {
   });
 
   return (
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Price</th>
-        </tr>
-      </thead>
-      <tbody>{rows}</tbody>
-    </table>
+    <div className="mt-6 w-96 relative h-56">
+      <table className="w-full min-w-max table-auto text-left">
+        <thead>
+          <tr>
+            <th className="border-b border-blue-gray-100 bg-blue-gray-50 p-4">
+              Name
+            </th>
+            <th className="border-b border-blue-gray-100 bg-blue-gray-50 p-4">
+              Price
+            </th>
+          </tr>
+        </thead>
+        <tbody>{rows}</tbody>
+      </table>
+    </div>
   );
 };
 
