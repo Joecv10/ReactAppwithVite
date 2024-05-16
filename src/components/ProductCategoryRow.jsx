@@ -1,11 +1,11 @@
 import React from "react";
 
 //Have to implement the json API mockup
-const ProductCategoryRow = () => {
+const ProductCategoryRow = ({ category }) => {
   return (
     <>
       <tr>
-        <th>Categoria</th>
+        <th>{category}</th>
       </tr>
     </>
   );

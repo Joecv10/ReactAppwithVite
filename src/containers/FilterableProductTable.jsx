@@ -1,12 +1,29 @@
 import { useState } from "react";
+import SearchBar from "../components/SearchBar";
 import ProdcutTable from "../components/ProductTable";
 
 function FilterableProductTable({ products }) {
-  const [count, setCount] = useState(0);
-
+  const [filterText, setFilterText] = useState("");
+  const [inStockOnly, setInStockOnly] = useState(false);
+  const onFilterTextChanged = (event) => {
+    setFilterText(event.target.value);
+  };
+  const onInStockOnlyChange = (event) => {
+    setInStockOnly(event.target.checked);
+  };
   return (
     <>
-      <ProdcutTable products={products} />
+      <SearchBar
+        filterText={filterText}
+        inStockOnly={inStockOnly}
+        onFilterTextChange={onFilterTextChanged}
+        onInStockOnlyChange={onInStockOnlyChange}
+      />
+      <ProdcutTable
+        products={products}
+        filterText={filterText}
+        inStockOnly={inStockOnly}
+      />
     </>
   );
 }
