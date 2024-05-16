@@ -1,6 +1,7 @@
 import { useState } from "react";
 import SearchBar from "../components/SearchBar";
 import ProdcutTable from "../components/ProductTable";
+import "../main.css";
 
 function FilterableProductTable({ products }) {
   const [filterText, setFilterText] = useState("");
